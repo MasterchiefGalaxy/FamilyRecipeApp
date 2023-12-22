@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes From Our Big Ole Family</title>
+  <style>
+    body {
+      background-color: #f5f5f5; /* Light grey background */
+      color: #333; /* Dark grey text for better readability */
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #fff;
+      border-bottom: 2px solid gold;
+      padding: 1rem;
+      text-align: center;
+    }
+    .recipe-menu {
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 60px; /* Below the header */
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .recipe-menu.active {
+      display: block; /* Show menu */
+    }
+    .recipe-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .recipe-menu li {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .recipe-menu li:last-child {
+      border-bottom: none;
+    }
+    .recipe-menu li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+    .toggle-button {
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Recipes From Our Big Ole Family</h1>
+  <div onclick="toggleMenu()" class="toggle-button">Menu</div>
+</header>
+
+<div class="recipe-menu" id="recipeMenu">
+  <ul>
+    <li><a href="recipe1.html">Chocolate Cake</a></li>
+    <li><a href="recipe2.html">Pasta Primavera</a></li>
+    <!-- Add other recipes as list items here -->
+  </ul>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('recipeMenu').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
