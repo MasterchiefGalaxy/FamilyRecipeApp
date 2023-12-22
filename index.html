@@ -93,6 +93,14 @@
   function toggleMenu() {
     document.getElementById('recipeMenu').classList.toggle('active');
   }
+    // Add event listener to close menu when clicking outside
+    document.addEventListener('click', function (event) {
+    const menu = document.getElementById('recipeMenu');
+    const button = document.querySelector('.toggle-button');
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.classList.remove('active');
+    }
+  });
 </script>
 
 </body>
