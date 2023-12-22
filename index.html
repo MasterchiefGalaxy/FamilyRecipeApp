@@ -9,18 +9,20 @@
       background-color: #bfc0c9; /* Light grey background */
       color: #333; /* Dark grey text for better readability */
       font-family: Georgia, serif;
+      text-align: center; /* Center-align all text within the body */
     }
     header {
       background-color: #bfc0c9;
       border-bottom: 15px solid gold;
       padding: 1rem;
-      text-align: center;
     }
     .recipe-menu {
       display: none; /* Hidden by default */
       position: absolute;
-      top: 60px; /* Below the header */
-      width: 100%;
+      top: 100px; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+      width: 200px; /* Set a fixed width for the menu */
       background-color: #fff;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       z-index: 1000;
@@ -47,11 +49,20 @@
     }
     .toggle-button {
       cursor: pointer;
-      position: fixed;
-      top: 10px;
-      right: 10px;
+      background-color: #ff9900; /* Orange background */
+      color: #fff; /* White text color */
+      padding: 0.5rem 1rem; /* Adjust padding for button size */
+      border-radius: 5px;
+      width: 100px; /* Set a fixed width for the button */
+      text-align: center; /* Center text within the button */
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); /* Center horizontally */
     }
-  </style> 
+    .toggle-button:hover {
+      background-color: #e68000; /* Darker orange on hover */
+    }
+  </style>
 </head>
 <body>
 
@@ -60,6 +71,9 @@
   <div onclick="toggleMenu()" class="toggle-button">Menu</div>
 </header>
 
+<div style="text-align: center;">
+  <img src="images/Nanny.png" alt="Granny looking out window" class="blog-image-small">
+</div>
 
 <div class="recipe-menu" id="recipeMenu">
   <ul>
