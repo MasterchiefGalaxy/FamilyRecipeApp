@@ -67,6 +67,10 @@
       max-width: 100%; /* Make images scale with screen width */
       height: auto; /* Maintain image aspect ratio */
     }
+    /* Change the color of the "Categories" link to gold */
+    .recipe-menu ul li a {
+      color: gold;
+    }
   </style>
 </head>
 <body>
@@ -80,12 +84,16 @@
   <img src="images/Nanny.png" alt="Granny looking out window" class="blog-image-small">
 </div>
 
+<!-- Updated menu with categories -->
 <div class="recipe-menu" id="recipeMenu">
   <ul>
-    <li><a href="recipe1.html">John's Chili</a></li>
-    <li><a href="recipe2.html">Pat Hale's Eagle Brand Peanut Butter Fudge</a></li>
-    <li><a href="recipe3.html">Pat Hale's Booyah Chunky Soup</a></li>
-    <!-- Add other recipes as list items here -->
+   
+    <ul>
+      <li><a href="Desserts.html">Desserts</a></li>
+      <li><a href="Lunch.html">Lunch</a></li>
+      <li><a href="Dinner.html">Dinner</a></li>
+      <!-- Add other categories as list items here -->
+    </ul>
   </ul>
 </div>
 
@@ -93,8 +101,8 @@
   function toggleMenu() {
     document.getElementById('recipeMenu').classList.toggle('active');
   }
-    // Add event listener to close menu when clicking outside
-    document.addEventListener('click', function (event) {
+  // Add event listener to close menu when clicking outside
+  document.addEventListener('click', function (event) {
     const menu = document.getElementById('recipeMenu');
     const button = document.querySelector('.toggle-button');
     if (!menu.contains(event.target) && !button.contains(event.target)) {
